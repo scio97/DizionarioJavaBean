@@ -17,7 +17,7 @@ public class Elimina implements java.io.Serializable{
 	}
 	public String getRisultato(){
 		try{
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://eu-cdbr-west-02.cleardb.net/heroku_cc602ece3a9cc08?user=b2f1387a4d8c19&password=08eb3522");
 			Statement stmt = con.createStatement();
             if(stmt.executeUpdate("DELETE FROM termini WHERE termine='"+termine+"'")==0){
